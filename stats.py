@@ -8,7 +8,8 @@ print("Average gene expression: " +  str(mean))
 squaredDistances = []
 for index, value in enumerate(geneExpressions):
     squaredDistances.append((geneExpressions[index] - mean)**2)
-standardDev = sum(squaredDistances) / len(squaredDistances)
+standardDev = (sum(squaredDistances) / len(squaredDistances))**0.5
+
 print("Standard deviation of gene expression: " + str(standardDev))
 
 # Return number of elements

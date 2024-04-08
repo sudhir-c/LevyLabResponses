@@ -10,7 +10,7 @@ class GeneUtils:
         squaredDistances = []
         for index, value in enumerate(self.geneExpressions):
             squaredDistances.append((self.geneExpressions[index] - mean)**2)
-        return sum(squaredDistances) / len(squaredDistances) 
+        return (sum(squaredDistances) / len(squaredDistances))**0.5 
     
     def returnDataSetLength(self) -> int:
         return len(self.geneExpressions)
